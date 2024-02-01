@@ -1,0 +1,337 @@
+:root{
+    --vilema: #001e43;
+    --secundario: #7c94a2;
+}
+p{
+    font-size: 107%;
+}
+h2{
+    color: var(--vilema);
+}
+.vilema{
+    color: var(--vilema);
+    font-weight: bold;
+}
+/*Nav*/
+img.nav-logo{
+    border-radius: 20px;
+    height: 10vh;
+    width: 7vw;
+}
+nav#main_nav.navbar{
+    background-color: var(--vilema)!important;
+    li.nav-item a.nav-link{
+        color: white;
+    }
+    li.nav-item a.nav-link:hover{
+        background-color: whitesmoke;
+        color: var(--vilema);
+    }
+}
+.navbar-light .navbar-toggler-icon{
+    background-image: url("../img/menu.png");
+    background-color: transparent;
+}
+/* .video{
+    width: 100%;
+    height: 10vh;
+    background-color: none;
+} */
+/*Hero*/
+h1.banner-heading{
+    font-weight: bolder;
+}
+p.bannerP{
+    color: beige;
+    font-size: 2rem;
+}
+
+a.banner-button{
+    background-color: #001e43;
+    color: white;
+    font-weight: 400;
+}
+a.banner-button:hover{
+    color: var(--secundario);
+
+}
+/*Pruebanos*/
+section.service-wrapper{
+    /* background-color: #A9c8e2; */
+    padding-top: 5vh!important;
+    padding-bottom: 5vh!important;
+    h2{
+        color: var(--vilema);
+    }
+}
+div.recent-work-header{
+    margin-top: 0!important;
+} 
+.pruebaSM{
+    display: none;
+}
+
+/*Nosotros*/
+#seccion-mision{
+    display: none;
+}
+#mostrarMenos{
+    display: none;
+}
+
+/*Simulador*/
+.simulador ::placeholder {
+    color: darkgrey;
+}
+.simulador span{
+    font-weight: 500;
+    margin-bottom: 300px!important;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.simulador input{
+    border: darkgrey 1px solid!important;
+    border-radius: 25px;
+    height: 40px;
+    width: 60%;
+    line-height: 40px;
+    display: inline-block;
+    padding: 0px 4vw;
+    color: var(--vilema);
+    font-size: 1rem;
+    text-transform: none;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 4vh;
+}
+.simulador input:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+/*Servicios*/
+a.services-button{
+    border-color: var(--vilema);
+    color: var(--vilema);
+
+}
+a.services-button:hover{
+    transition: 300ms;
+    background-color: var(--vilema);
+    /* border: #7c94a2 1px solid; */
+    color: white;
+}
+
+
+/*Solicitud*/
+.callback-form {
+	padding-top: 70px;
+}
+.callback-form h2{
+	color: var(--vilema);
+	font-size: 3rem;
+	font-weight: 700;
+}
+.callback-form span{
+	color: var(--vilema);
+    font-size: 1.7rem;
+
+}
+
+/*Form de la solicitud*/
+.callback-form .contact-form {
+    font-family: sans-serif;
+	background-color: transparent;
+    margin: 3vh;
+	padding: 5vh;
+	border-radius: 25px;
+	text-align: center;
+        label{
+            color: var(--vilema);
+            font-weight: 600;
+            padding-bottom: .5vh;
+        }
+        input{
+            border-radius: 15px;
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+            display: inline-block;
+            padding: 0px 2vh;
+            color: var(--vilema);
+            font-size: 1rem;
+            text-transform: none;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 4vh;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+        select {
+            border-radius: 15px;
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+            display: inline-block;
+            padding: 0px 2vh;
+            color: var(--vilema);
+            font-size: 1rem;
+            text-transform: none;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 4vh;
+        }
+        select:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+        textarea {
+            border-radius: 15px;
+            height: 12vh;
+            max-height: 200px;
+            min-height: 120px;
+            display: inline-block;
+            padding: 15px;
+            color: var(--vilema);
+            font-size: 1rem;
+            text-transform: none;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 35px;
+        }
+        textarea:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+        
+
+}
+.callback-form .contact-form ::-webkit-input-placeholder { /* para Edge */
+    color: #aaa;
+}
+.callback-form .contact-form ::placeholder {
+    color: darkgrey;
+}
+.callback-form .contact-form button.border-button {
+	background-color: transparent;
+	color: cornflowerblue;
+	border: 2px solid cornflowerblue;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 10px 28px;
+	border-radius: 30px;
+	display: inline-block;
+	transition: all 0.3s;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
+	cursor: pointer;
+}
+
+.callback-form .contact-form button.border-button:hover {
+	background-color: cornflowerblue;
+	color: white;
+    font-weight: bold;
+}
+
+.bx-md{
+    font-size:2.25rem!important
+}
+
+
+/*Nosotros*/
+.img{
+    border-radius: 20px;
+    height: 40vh;
+    width: 20vw;
+}
+
+/*Para cel*/
+@media only screen and (max-width: 600px) {
+    nav#main_nav.navbar{
+        background-color: var(--vilema)!important;
+        li.nav-item a.nav-link{
+            color: white!important;
+        }
+        li.nav-item a.nav-link:hover{
+            background-color: none!important;
+            color: white;
+        }
+    }
+    .video{
+        width: 80%;
+        height: 8vh;
+        background-color: none;
+    }
+    .pruebaMD{
+        display: none;
+    }
+    .pruebaSM{
+        display: block;
+    }
+    #index_banner {
+        background-image: url('./../img/banner-01-celular.jpg');
+        background-position: center center; 
+    }
+    h1.banner-heading{
+        font-size: 2rem;
+    }
+    p.bannerP {
+        font-size: 1rem; /* Cambia el tamaño del texto para pantallas más pequeñas */
+    }
+    .simulador input{
+        width: 70%;
+    }
+    .callback-form .contact-form button.border-button{
+        margin-top: 10px;
+    }
+}
+/*Para iPad*/
+@media only screen and (max-width: 1100px) {
+    #index_banner {
+        background-image: url('./../img/banner-01-celular.jpg');
+        background-position: center center; 
+    }
+    .service-wrapper img.img{
+        width: 80%;
+    }
+}
+
+.btn-wha{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+	background-color: var(--vilema);
+    color:#fffeff;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wha:hover{
+	color: var(--vilema);
+	background-color: #fffeff;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wha{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
