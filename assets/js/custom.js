@@ -1,3 +1,20 @@
+/***********    Nosotros    ***************/
+
+function mostrarMision() {
+    document.getElementById("seccion-mision").style.display = "block"
+    document.getElementById("botonConoce").style.display = "none"
+    document.getElementById("mostrarMenos").style.display = "block"
+    
+}
+function ocultarMision() {
+    document.getElementById("seccion-mision").style.display = "none"
+    document.getElementById("botonConoce").style.display = "block"
+    document.getElementById("mostrarMenos").style.display = "none"
+    
+}
+
+/***********    Simulador    ***************/
+
 function formatearPesos(valor){
     const floatValue = parseFloat(valor);
     if (!isNaN(floatValue)) {
@@ -12,26 +29,27 @@ function formatearPesos(valor){
 
 function calcularValor(valor){
     try{
-        // let valorInmueble = document.getElementById("valorInmueble").value;
+        valor = valor.replace(/\D/g, '');
+        let valorInmueble = document.getElementById("valorInmueble");
         let pagoMensual = document.getElementById("pagoMensual");
         let enganche = document.getElementById("enganche");
+        
+        
         let engancheValue = formatearPesos(valor * .10);
         let value = formatearPesos(valor/72) ;
         pagoMensual.innerHTML = value ;
-        enganche.innerHTML = engancheValue
+        enganche.innerHTML = engancheValue;
+        
+        // valorInmueble.value = formatearPesos(valor);
         
     }catch(e){console.error("Ocurrió un error al simular el crédito")}
 }
+// function formatoMoneda(input) {
+//     let valor = input.value;
+//     valor = valor.replace(/\D/g, '');
+//     valor = formatearPesos(valor);
+//     input.value = valor;
+// }
 
-function mostrarMision() {
-    document.getElementById("seccion-mision").style.display = "block"
-    document.getElementById("botonConoce").style.display = "none"
-    document.getElementById("mostrarMenos").style.display = "block"
-    
-}
-function ocultarMision() {
-    document.getElementById("seccion-mision").style.display = "none"
-    document.getElementById("botonConoce").style.display = "block"
-    document.getElementById("mostrarMenos").style.display = "none"
-    
-}
+/***********    Email    ***************/
+/* Se usó form submit */

@@ -60,10 +60,11 @@
                         <div class="py-5 row d-flex align-items-center">
                             <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
                                 <h1 class="banner-heading h1 text-light display-3 mb-0 pb-3 mx-0 px-0 light-300">
-                                    Conexiones financieras que hacen posible tus sueños.
+                                    La mejor asesoría para ti.
                                 </h1>
+                                <p class="h2 bannerP">Somos <i class="vilemaHero">Vilema.mx</i></p>
                                 <p class="bannerP py-3">
-                                    Para <i class="vilema">Vilema</i> cada cliente es una historia única, y con nuestras conexiones, contribuimos a escribir capítulos de éxito, felicidad y estabilidad en el libro de tu vida.
+                                    Te ayudamos a elegir el mejor crédito hipotecario, automotriz o seguro.
                                 </p>
                                 <a class="banner-button btn rounded-pill btn-lg px-4" href="#solicitud" role="button">Solicita tu crédito</a>
                             </div>
@@ -227,16 +228,14 @@
                 <div class="col-md-6 col-sm-12 pb-3 px-2 text-center">
                     <img src="./assets/img/vilema.jpg" alt="logo de vilema" class="img">
                 </div>
-                <p class="col-md-4 text-center pb-3 px-2">
+                <p class="col-lg-4 col-md-5 text-center pb-3 px-2">
                     En <i class="vilema">Vilema</i>, no somos solo una empresa; somos una historia en constante evolución, llena de innovación, pasión y éxito. Te invitamos a sumergirte en la narrativa de nuestra dedicación para transformar ideas en realidades asombrosas. <br> <br>
                     Nos enorgullece el poder cambiar vidas de muchos mexicanos, pero nuestro viaje no se detiene aquí. Estamos comprometidos con la innovación continua y con proporcionar soluciones que marquen la diferencia.
                     <br><br>
                     ¿Te preguntas cómo puedes ser parte de esta historia? ¡Es más fácil de lo que piensas! Explora nuestro sitio web para conocer más sobre nuestra visión, valores y el equipo apasionado que impulsa cada éxito.
                     <br>
-                    <a class="services-button btn rounded-pill btn-lg my-3 " role="button" onclick="mostrarMision()" id="botonConoce">Conoce más de Vilema</a>
+                    <a class="services-button btn rounded-pill btn-lg my-3 boton " role="button" onclick="mostrarMision()" id="botonConoce">Conoce más de Vilema</a>
                     <a class="services-button btn rounded-pill btn-lg my-3 " role="button" onclick="ocultarMision()" id="mostrarMenos">Mostrar menos</a>
-
-
                 </p> 
             </div>
         </div>
@@ -287,28 +286,35 @@
     <section class="service-wrapper py-3 bg-light" id="simulador">
         <div class="container-fluid pb-3">
             <div class="row">
-                <h2 class="h2 text-center col-12 py-4 semi-bold-600">Simula tu crédito</h2>
-                <div class="service-header col-2 col-lg-3 text-end light-300"></div>
-                <div class="service-heading col-12 col-lg-9 text-start float-end light-300">
+                <h2 class="h2 text-center col-12 px-4 semi-bold-600">Simula tu crédito</h2>
+                <div class="service-heading col-12 text-center float-end light-300 p-3">
                     <h2 class="h3 pb-4">Usa nuestro simulador para descubrir cómo conseguir el mejor crédito hipotecario.</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-1"></div>
-                <div class="col-lg-5 text-center simulador text-primary">
+                <div class="col-lg-4 text-center simulador text-primary">
                     <div class="h1">Precio del inmueble</div><br><br>
-                    <input type="number" class="simulador" placeholder="Monto del inmueble en pesos" onkeyup="calcularValor(this.value)">
+                    <input 
+                    type="text" 
+                    class="simulador" 
+                    id="valorInmueble" 
+                    placeholder="Monto del inmueble en pesos" 
+                    onkeyup="calcularValor(this.value)" 
+                    maxlength="9">
                 </div>
-                <div class="col-lg-3 d-flex align-items-center text-primary justify-content-center px-5">
-                    <div class="h1" id="valorInmueble">Pago mensual: </div>
-                    <div class="h1 px-4" id="pagoMensual"> $000.00</div>
+                <div class="col-lg-4 d-flex align-items-center text-primary justify-content-center p-5">
+                            <div class="h1">Pago mensual: </div>
+                            <div class="h1 px-4" id="pagoMensual"> $000.00</div>
                 </div>
-                <div class="col-lg-2 d-flex align-items-center text-primary justify-content-center px-5">
-                    <div class="h1">Enganche: </div>
-                    <div class="h1 px-4" id="enganche"> $000.00</div>
+                <div class="col-lg-4 d-flex align-items-center text-primary justify-content-center p-5">
+                        <div class="h1">Enganche: </div>
+                        <div class="h1 px-4" id="enganche"> $000.00</div>
                 </div>
-                <div class="col-1"></div>
-            </div>
+                <br>
+                <div class="col-lg-4 offset-lg-4 text-center p-5">
+                    <a href="#solicitud" class="boton px-5">Más información</a>
+                </div>
+            </div>            
             <div class="row">
                 <div class="col-12 text-center px-4 text-muted">
                     <span>Esta estimación se fundamenta en el promedio de las tasas ofrecidas por nuestras entidades bancarias asociadas. <br> Para obtener información precisa sobre los montos reales, le recomendamos ponerse en contacto con uno de nuestros asesores.</span>
@@ -327,7 +333,7 @@
             </div>
             <div class="row gy-5 g-lg-5 mb-4">
                 <div class="col-md-4 mb-3">
-                    <a href="solicitud.html" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <a href="#solicitud" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="./assets/img/hipotecario.jpg" alt="Hipotecario">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
@@ -337,10 +343,10 @@
                         </div>
                     </a>
                     <br>
-                    <a class="services-button btn rounded-pill btn-lg px-4 offset-3" href="#" role="button">Solicita tu crédito</a>
+                    <a class="services-button btn rounded-pill btn-lg px-4 offset-3" href="#solicitud" role="button">Solicita tu crédito</a>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <a href="solicitud.html" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <a href="#solicitud" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="./assets/img/automotriz.jpg" alt="Automotriz">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
@@ -350,10 +356,10 @@
                         </div>
                     </a>
                     <br>
-                    <a class="services-button btn rounded-pill btn-lg px-4 offset-3" href="#" role="button">Solicita tu crédito</a>
+                    <a class="services-button btn rounded-pill btn-lg px-4 offset-3" href="#solicitud" role="button">Solicita tu crédito</a>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <a href="solicitud.html" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <a href="#solicitud" class="recent-work card border-0 shadow-lg overflow-hidden">
                         <img class="recent-work-img card-img" src="./assets/img/seguro.jpg" alt="Seguro de vida">
                         <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
                             <div class="recent-work-content text-start mb-3 ml-3 text-dark">
@@ -363,7 +369,7 @@
                         </div>
                     </a>
                     <br>
-                    <a class="services-button btn rounded-pill btn-lg px-4 offset-3" href="#" role="button">Solicita tu seguro</a>
+                    <a class="services-button btn rounded-pill btn-lg px-4 offset-3" href="#solicitud" role="button">Solicita tu seguro</a>
                 </div>
             </div>
         </div>
@@ -377,15 +383,15 @@
                 <div class="h2 text-center">
                     <h2>Solicita tu crédito</h2>
                     <span class="light-300">Por favor llena la solicitud y con gusto te contactaremos de vuelta a la brevedad posible.</span>
-                <div class="visible-lg visible-md"><br></div>
+                <!-- <div class="visible-lg visible-md"><br></div> -->
                 </div>
             </div>
-            <div class="col-12 text-center">
+            <!-- <div class="col-12 text-center">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.721728732815!2d-99.17895638529798!3d19.381198147344914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff9cfd3572c1%3A0xd3a19933bf2ca038!2sAv.%20Insurgentes%20Sur%201079%2C%20Col%20del%20Valle%20Sur%2C%20Benito%20Ju%C3%A1rez%2C%2003720%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1656640309887!5m2!1ses!2smx" width="90%" height="450" style="border:solid 5px #386d64;border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </div> -->
             <div class="col-md-12">
                 <div class="contact-form">
-                    <form id="contact" action="https://formsubmit.co/soyvita@vitainsurance.mx" method="POST">
+                    <form id="contact" action="https://formsubmit.co/javilavi3@gmail.com" method="POST">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <fieldset>
@@ -435,6 +441,51 @@
         </div>
         </div>
     </div>    
+
+    <!-- Aliados -->
+    <section class="aliados py-3" id="aliados">
+        <div class="container-fluid pb-3">
+            <div class="row">
+                <h2 class="h2 text-center col-12 py-4 semi-bold-600">Nuestros aliados</h2>
+            </div>
+            <div class="row px-3">
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/afirme.png" alt="afirme" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/banorte.png" alt="banorte" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/bancaMifel.png" alt="banca Mifel" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/bx.png" alt="bx+" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/citibanamex.png" alt="citibanamex" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/hsbc.png" alt="hsbc" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                        <img src="./assets/img/scotiabank.png" alt="scotiabank" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/ion.png" alt="ion" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                        <img src="./assets/img/heyBanco.png" alt="hey Banco" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/iban.png" alt="iban" class="aliado">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <img src="./assets/img/yave.png" alt="yave" class="aliado">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <footer class="bg-secondary pt-4" id="footer">
         <div class="container">
@@ -533,7 +584,14 @@
 
     <a href="https://wa.me/+525555555555" class="btn-wha" target="_blank">
         <i class="bx bxl-whatsapp bx-md"></i>
-     </a>
+    </a>
+
+    <a href="#" class="btn-up">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 30">
+            <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"/>
+            <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+          </svg>
+    </a>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>

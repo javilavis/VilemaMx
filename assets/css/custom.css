@@ -13,21 +13,28 @@ h2{
     color: var(--vilema);
     font-weight: bold;
 }
+
 /*Nav*/
 img.nav-logo{
     border-radius: 20px;
     height: 10vh;
     width: 7vw;
 }
+/*Nav especificamente para lap en adelante*/
+@media only screen and (min-width: 1000px) {
+nav.navbar{
+    li.nav-item a.nav-link:hover{
+        background-color: whitesmoke;
+        color: var(--vilema)!important;
+    }
+}
+}
 nav#main_nav.navbar{
     background-color: var(--vilema)!important;
     li.nav-item a.nav-link{
         color: white;
     }
-    li.nav-item a.nav-link:hover{
-        background-color: whitesmoke;
-        color: var(--vilema);
-    }
+    
 }
 .navbar-light .navbar-toggler-icon{
     background-image: url("../img/menu.png");
@@ -53,7 +60,8 @@ a.banner-button{
     font-weight: 400;
 }
 a.banner-button:hover{
-    color: var(--secundario);
+    background-color: #00316f;
+    color: whitesmoke;
 
 }
 /*Pruebanos*/
@@ -88,6 +96,7 @@ div.recent-work-header{
     font-weight: 500;
     margin-bottom: 300px!important;
 }
+/*Para que no salgan las flechas del type number*/
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
@@ -100,20 +109,38 @@ input[type=number]::-webkit-outer-spin-button {
     width: 60%;
     line-height: 40px;
     display: inline-block;
-    padding: 0px 4vw;
+    text-align: center;
+    padding: 1vh 1vw;
     color: var(--vilema);
     font-size: 1rem;
     text-transform: none;
     box-shadow: none;
     border: none;
     margin-bottom: 4vh;
+    
+    
 }
 .simulador input:focus {
     outline: none;
     box-shadow: none;
     border: none;
+    
 }
-
+a.boton{
+    width: 100%;
+    border: var(--vilema) 1px solid;
+    color: var(--vilema);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: ease-in-out 150ms;
+}
+a.boton:hover{
+    
+    background-color: var(--vilema);
+    color: whitesmoke;
+}
 /*Servicios*/
 a.services-button{
     border-color: var(--vilema);
@@ -224,8 +251,8 @@ a.services-button:hover{
 }
 .callback-form .contact-form button.border-button {
 	background-color: transparent;
-	color: cornflowerblue;
-	border: 2px solid cornflowerblue;
+	color: #004fb1;
+	border: 2px solid #004fb1;
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -240,7 +267,7 @@ a.services-button:hover{
 }
 
 .callback-form .contact-form button.border-button:hover {
-	background-color: cornflowerblue;
+	background-color: #004fb1;
 	color: white;
     font-weight: bold;
 }
@@ -256,6 +283,27 @@ a.services-button:hover{
     height: 40vh;
     width: 20vw;
 }
+.aliados{
+    /* padding: 5vw; */
+    img.aliado{
+        /* max-height: 10vh; */
+        padding: 4vw;
+        width: 100%;
+
+    }
+    
+}
+
+
+
+
+
+
+
+
+/**********
+RESPONSIVE
+***********/
 
 /*Para cel*/
 @media only screen and (max-width: 600px) {
@@ -267,6 +315,9 @@ a.services-button:hover{
         li.nav-item a.nav-link:hover{
             background-color: none!important;
             color: white;
+        }
+        li.nav-item a.nav-link:active{
+            background-color: none;
         }
     }
     .video{
@@ -328,9 +379,34 @@ a.services-button:hover{
 	color: var(--vilema);
 	background-color: #fffeff;
 }
+.btn-up{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:100px;
+    right:25px;
+	background-color: var(--vilema);
+    color:#fffeff;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-up:hover{
+	color: var(--vilema);
+	background-color: #fffeff;
+}
 
 @media only screen and (min-width:320px) and (max-width:768px){
     .btn-wha{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+    .btn-up{
         width:63px;
         height:63px;
         line-height: 66px;
